@@ -32,30 +32,32 @@ function App() {
 
   return (
     <>
-      {movies.map((movie, index) => {
-        // Create local state for each movie's rating
-        const [tempRate, setTempRate] = useState(0);
-        const [rating, setRate] = useState(0);
+      <div className="cards">
+        {movies.map((movie, index) => {
+          // Create local state for each movie's rating
+          const [tempRate, setTempRate] = useState(0);
+          const [rating, setRate] = useState(0);
 
-        return (
-          <Rating_card key={index} image={movie.image} name={movie.name}>
-            <Star_rating
-              maxRating={maxRating}
-              tempRate={tempRate}
-              setTempRate={setTempRate}
-              rating={rating}
-              setRate={setRate}
-              messages={[
-                "Not good 😕", // 1 star
-                "Could be better 🙂", // 2 stars
-                "Average 😃", // 3 stars
-                "Good 😇", // 4 stars
-                "Excellent 🤩", // 5 stars
-              ]}
-            />
-          </Rating_card>
-        );
-      })}
+          return (
+            <Rating_card key={index} image={movie.image} name={movie.name}>
+              <Star_rating
+                maxRating={maxRating}
+                tempRate={tempRate}
+                setTempRate={setTempRate}
+                rating={rating}
+                setRate={setRate}
+                messages={[
+                  "Not good 😕", // 1 star
+                  "Could be better 🙂", // 2 stars
+                  "Average 😃", // 3 stars
+                  "Good 😇", // 4 stars
+                  "Excellent 🤩", // 5 stars
+                ]}
+              />
+            </Rating_card>
+          );
+        })}
+      </div>
     </>
   );
 }

@@ -3,67 +3,74 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   text-align: center;
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: center; /* Center the cards horizontally */
+  gap: 2rem; /* Space between cards */
+  padding: 2rem; /* Padding around the card container */
+}
+
 .card {
   display: flex;
-  width: auto;
-  min-width: 320px;
-  margin: 1.8rem auto;
-  /* justify-content: center; */
-  /* align-items: center; */
+  flex-direction: column; /* Stack content vertically */
+  max-width: 500px; /* Maximum width of each card */
+  min-width: 320px; /* Minimum width of each card */
+  margin: 0 auto; /* Center the card */
   text-align: center;
-  gap: 20px;
-  padding: 1.1rem;
-  box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.129);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  gap: 1rem; /* Space between elements in the card */
+  padding: 1rem; /* Padding inside the card */
+  border-radius: 10px; /* Rounded corners for the card */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  background-color: white; /* Card background color */
 }
 
 .card img {
   object-fit: cover;
-  width: 300px;
-  height: 400px;
-  border-radius: 10px;
+  width: 100%; /* Make image responsive */
+  height: 50%; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for the image */
+  transition: all 0.4s;
+}
+
+.card img:hover {
+  transform: scale(1.09);
+  cursor: pointer;
 }
 
 .content {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
+  height: 49%;
   gap: 20px;
+  flex-direction: column; /* Stack content vertically */
+  /* justify-content: space-between; Distribute space evenly */
 }
 
 .content p {
-  padding: 10px;
-  font-size: 1rem;
-  font-weight: 200;
-  font-family: "Times New Roman", Times, serif;
+  padding: 0.5rem; /* Adjusted padding for better spacing */
+  font-size: clamp(1rem, calc(1vw + 0.5rem), 1.2rem); /* Responsive font size */
 }
 
 .content button {
   background-color: rgb(57, 57, 252);
-  padding: 1rem;
+  padding: 0.8rem; /* Adjusted padding for a more compact button */
   color: aliceblue;
   font-size: large;
-  border: none;
 }
 
 .content div {
-  width: 100%;
-  height: 40%;
-  margin-bottom: 20px;
+  width: auto; /* Allow div to take its content width */
+  /* Space below the div */
 }
 
 .content div h1 {
-  width: 100%;
-  height: 60%;
   color: rgb(78, 80, 87);
-  font-size: 4rem;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: clamp(2rem, calc(2vw + 0.5rem), 3.4rem); /* Responsive font size */
 }
 
 .content button:hover {
