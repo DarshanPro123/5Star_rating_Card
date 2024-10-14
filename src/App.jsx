@@ -2,8 +2,12 @@ import { useState } from "react";
 import "./App.css";
 import Star_rating from "./components/Star_Rating.jsx";
 import Rating_card from "./components/Rating_Card.jsx";
+import PropTypes from "prop-types";
 
 function App() {
+  App.propTypes = {
+    maxRating: PropTypes.number, // not user maxRating give as string or another types
+  };
   const maxRating = 5;
 
   // Define an array of movies with their respective images and names
@@ -47,11 +51,11 @@ function App() {
                 rating={rating}
                 setRate={setRate}
                 messages={[
-                  "Not good 😕", // 1 star
-                  "Could be better 🙂", // 2 stars
-                  "Average 😃", // 3 stars
-                  "Good 😇", // 4 stars
-                  "Excellent 🤩", // 5 stars
+                  "Not good ", // 1 star
+                  "Could be better ", // 2 stars
+                  "Average ", // 3 stars
+                  "Good ", // 4 stars
+                  "Excellent", // 5 stars
                 ]}
               />
             </Rating_card>
