@@ -44,7 +44,7 @@ body {
 }
 
 .content button:hover {
-  background-color: #ffcd03;
+  background-color: #0392ff;
   color: black;
   cursor: pointer;
 }
@@ -57,14 +57,16 @@ body {
 }
 
 .star-box p {
+  width: 200px;
+  text-align: center;
+  font-size: 1.3rem;
   transition: all 0.5s;
   color: #ffcd03;
-  font-size: 1.2rem;
 }
 
 .star-container {
   display: flex;
-  gap: 5px;
+  gap: 6px;
 }
 
 span {

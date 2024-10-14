@@ -4,7 +4,7 @@ import Star_rating from "./components/Star_Rating.jsx";
 import Rating_card from "./components/Rating_Card.jsx";
 
 function App() {
-  const maxRating = 7;
+  const maxRating = 5;
   const [tempRate, setTempRate] = useState(0);
 
   const [rating, setRate] = useState(0);
@@ -18,6 +18,13 @@ function App() {
           setTempRate={setTempRate}
           rating={rating}
           setRate={setRate}
+          messages={[
+            "Not good 😕", // 1 star
+            "Could be better 🙂", // 2 stars
+            "Average 😃", // 3 stars
+            "Good 😇", // 4 stars
+            "Excellent 🤩", // 5 stars
+          ]}
         />
       </Rating_card>
     </>
